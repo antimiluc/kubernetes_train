@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-red
+  labels:
+     app: web
+spec:
+  containers: 
+    - name: red
+      image: kodekloud/webapp-color
+      ports:
+        - containerPort: 8080
+      env:
+        - name: APP_COLOR
+          value: "red"
